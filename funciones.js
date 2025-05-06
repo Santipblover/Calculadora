@@ -23,16 +23,16 @@ function manejarOperacion(valor) {
             operando1 = resultado.toString();
             operando2 = '';
             operacion = '';
-    } else {
-        if (operacion === '') {
+    } else if (operacion === '') {
             operando1 += valor;
             actualizarDisplay(operando1);
-        } else {
+        } else { 
             operando2 += valor;
             actualizarDisplay(operando2);
         }
-    }
-}
+        }
+    
+
 
 
 function calcularResultado(num1, num2, operador) {

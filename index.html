@@ -1,139 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
 
+    <link rel="stylesheet" href="style.css" />
 
-
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-</head>
-<body>
-    
-<header>
-    <div class="title">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="title">
         <h1>Calculadora</h1>
-    </div>    
-</header>
+      </div>
+    </header>
 
-<main>
-        <section class="calculadora">
-            <div class="display">
-                <span class="content">0</span>
-                <!--Contenido del display-->
+    <main>
+      <section class="calculadora">
+        <div class="display">
+          <span class="content">0</span>
+        </div>
+        <div class="buttons">
+          <div class="button" id="on">
+            <div class="key" data-sound="click1">ON</div>
+          </div>
+          <div class="button" id="off">
+            <div class="key" data-sound="click1">OFF</div>
+          </div>
+          <div class="button" id="suma">
+            <div class="key" data-sound="click1">+</div>
+          </div>
+          <div class="button" id="resta">
+            <div class="key" data-sound="click1">-</div>
+          </div>
+          <div class="button" id="siete">
+            <div class="key" data-sound="click1">7</div>
+          </div>
+          <div class="button" id="ocho">
+            <div class="key" data-sound="click1">8</div>
+          </div>
+          <div class="button" id="nueve">
+            <div class="key" data-sound="click1">9</div>
+          </div>
+          <div class="button" id="multiplicado">
+            <div class="key" data-sound="click1">x</div>
+          </div>
+          <div class="button" id="cuatro">
+            <div class="key" data-sound="click1">4</div>
+          </div>
+          <div class="button" id="cinco">
+            <div class="key" data-sound="click1">5</div>
+          </div>
+          <div class="button" id="seis">
+            <div class="key" data-sound="click1">6</div>
+          </div>
+          <div class="button" id="dividido">
+            <div class="key" data-sound="click1">÷</div>
+          </div>
+          <div class="button" id="uno">
+            <div class="key" data-sound="click1">1</div>
+          </div>
+          <div class="button" id="dos">
+            <div class="key" data-sound="click1">2</div>
+          </div>
+          <div class="button" id="tres">
+            <div class="key" data-sound="click1">3</div>
+          </div>
+          <div class="button" id="igual">
+            <div class="key" data-sound="click1">=</div>
+          </div>
+          <div class="button" id="punto">
+            <div class="key" data-sound="click1">.</div>
+          </div>
+          <div class="button" id="cero">
+            <div class="key" data-sound="click1">0</div>
+          </div>
+          <div class="button" id="porcentaje">
+            <div class="key" data-sound="click1">%</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="containerdarkmode">
+      <button type="button" name="button" id="darkmode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
 
-            </div>
-            <div class="buttons">
-                <div class="button" id="on">
-                   <div class="key" data-sound="click1">ON</div>
-                </div>
-                <div class="button" id="off">
-                   <div class="key" data-sound="click1">OFF</div>
-                </div>
-                <div class="button" id="suma">
-                    <div class="key" data-sound="click1">+</div>
-                </div>
-                <div class="button" id="resta">
-                   <div class="key" data-sound="click1">-</div>
+    <footer></footer>
 
-                </div>
-                <div class="button" id="siete">
-                    <div class="key" data-sound="click1">7</div>
+    <audio src="click_sound.wav" id="click1"></audio>
 
-                </div>
-                <div class="button" id="ocho">
-                    <div class="key" data-sound="click1">8</div>
-
-                </div>
-                <div class="button" id="nueve">
-                    <div class="key" data-sound="click1">9</div>
-
-                </div>
-                <div class="button" id="multiplicado">
-                    <div class="key" data-sound="click1">x</div>
-
-                </div>
-                <div class="button" id="cuatro">
-                    <div class="key" data-sound="click1">4</div>
-
-                </div>
-                <div class="button" id="cinco">
-                    <div class="key" data-sound="click1">5</div>
-
-                </div>
-                <div class="button" id="seis">
-                    <div class="key" data-sound="click1">6</div>
-
-                </div>
-                <div class="button" id="dividido">
-                    <div class="key" data-sound="click1">÷</div>
-
-                </div>
-                <div class="button" id="uno">
-                    <div class="key" data-sound="click1">1</div>
-
-                </div>
-                <div class="button" id="dos">
-                    <div class="key" data-sound="click1">2</div>
-
-                </div>
-                <div class="button" id="tres">
-                    <div class="key" data-sound="click1">3</div>
-
-                </div>
-                <div class="button" id="igual">
-                    <div class="key" data-sound="click1">=</div>
-
-                </div>
-                <div class="button" id="punto">
-                    <div class="key" data-sound="click1">.</div>
-                </div>
-                <div class="button" id="cero">
-                    <div class="key" data-sound="click1">0</div>
-                </div>
-                <div class="button" id="porcentaje">
-                    <div class="key" data-sound="click1">%</div>
-
-                </div>
-            </div>
-        </section>
-        
-</main>
-<div class="containerdarkmode">
-<button type="button" name="button" id="darkmode">
-    <i class="fas fa-moon"></i>
-</button>
-</div>
-
-    
-
-
-
-
-
-
-<footer>
-    
-</footer>
-
-<audio src="click_sound.wav" id="click1"></audio>
-
-<script src="efectoDeSonidoTeclas.js"></script>
-<script src="funciones.js"></script>
-<script src="darkMode.js"></script>
-</body>
-
-
-
-
-
-
-
-
-
+    <script src="efectoDeSonidoTeclas.js"></script>
+    <script src="funciones.js"></script>
+    <script src="darkMode.js"></script>
+  </body>
 </html>
